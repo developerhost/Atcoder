@@ -23,6 +23,9 @@ maxDepthメソッドは、与えられたルートノードから始まる木の
 最終的に、最大の深さが返されます。
 """
 
+from collections import deque
+
+
 class Solution:
     def maxDepth(self, root: 'Node') -> int:
         if not root:
