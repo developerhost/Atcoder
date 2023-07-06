@@ -25,6 +25,8 @@ maxDepthメソッドは、与えられたルートノードから始まる木の
 
 from collections import deque
 
+from yaml import Node
+
 
 class Solution:
     def maxDepth(self, root: 'Node') -> int:
