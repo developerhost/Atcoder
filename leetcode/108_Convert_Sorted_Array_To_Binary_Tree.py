@@ -1,5 +1,6 @@
 # Definition for a binary tree node.
 from ast import List
+from typing import Optional
 
 
 class TreeNode:
