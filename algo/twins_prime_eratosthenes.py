@@ -22,7 +22,7 @@ def Eratosthenes(N):
             continue
         
         # i の倍数を除外していく
-        j = i * 2
+        j = i * 2 # jがi * 2から始まるのは、i * 2 以前はすでに除外されているから
         while j <= N:
             is_prime[j] = False
             j += i
