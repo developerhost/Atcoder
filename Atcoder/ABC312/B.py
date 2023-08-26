@@ -32,7 +32,6 @@ def is_tak_code(grid):
                 if grid[i][j] != "#":
                     return False
             # 左上及び右下の3x3領域に隣接する14マスはすべて白（.）である。
-            # elif (i < 3 and 3 <= j < 6) or (i >= 6 and 3 <= j < 6):
             elif (i < 3 and j == 3) or (i == 0 and 0 <= j <= 3) or (i == 5 and 5 <= j <= 8) or (5 < i < 9 and j == 5):
                 if grid[i][j] != ".":
                     return False
