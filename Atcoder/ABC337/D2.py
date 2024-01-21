@@ -1,6 +1,6 @@
 def min_operations_to_o_line_improved(H, W, K, grid):
     def count_dots_for_line(start_i, start_j, d_i, d_j):
-        # Count the number of '.'s in a potential line of K 'o's
+        # K個の'o'で構成される行の'.'の数を数える
         return sum(grid[start_i + d_i * k][start_j + d_j * k] == '.' for k in range(K))
 
     # 冗長チェックを避けるために、各行と列に「x」の存在を事前に計算します
