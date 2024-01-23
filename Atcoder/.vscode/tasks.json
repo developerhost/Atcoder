@@ -1,0 +1,39 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "download problem",
+      "detail": "問題をダウンロードします",
+      "type": "shell",
+      "command": "mkdir ${input:problemNo} && cd ${workspaceFolder}\\${input:problemNo} && oj-prepare https://atcoder.jp/contests/${input:problemNo}"
+    },
+    {
+      "label": "test",
+      "detail": "テストします",
+      "type": "shell",
+      "command": "cd ${workspaceFolder}\\${relativeFileDirname} && oj test -c 'python ${file}' -t 2"
+    },
+    {
+      "label": "submit (CPython 3.11.4)",
+      "detail": "(CPython 3.11.4)で提出します",
+      "type": "shell",
+      "command": "cd ${workspaceFolder}\\${relativeFileDirname} && oj submit ${fileBasename} -l 5055"
+    },
+    {
+      "label": "submit (Cython 0.29.34)",
+      "detail": "(Cython 0.29.34)で提出します",
+      "type": "shell",
+      "command": "cd ${workspaceFolder}\\${relativeFileDirname} && oj submit ${fileBasename} -l 5082"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "problemNo", // ${input:***}で指定したID
+      "description": "AtCoderの問題Noを入力してください", // 入力説明文
+      "default": "", // デフォルト入力値
+      "type": "promptString" // 入力タイプ
+    }
+  ]
+}
