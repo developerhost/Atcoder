@@ -44,7 +44,7 @@ def min_operations_to_o_line(H, W, K, grid):
     # 有効な行が見つからなかった場合は -1 を返し、それ以外の場合は最小の操作数を返します。
     return -1 if min_ops == float('inf') else min_ops
 
-
+# test
 # 標準入力から入力を読み取る
 # H, W, K = map(int, input().split())
 # grid = [input().strip() for _ in range(H)]
